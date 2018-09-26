@@ -48,14 +48,14 @@ get_header();
 			<div class="row site-content" id="blog-masonry">
 				<?php 
 					if ( have_posts() ) :
-					// Start the Loop.
-					while ( have_posts() ) : the_post();
-						// Include the post format-specific template for the content. get_post_format
-						echo '<div class="item">';
-						get_template_part( 'content','');
-						echo '</div>';
-					endwhile;
-				endif;
+						// Start the Loop.
+						while ( have_posts() ) : the_post();
+							// Include the post format-specific template for the content. get_post_format
+							echo '<div class="item">';
+							get_template_part( 'content','');
+							echo '</div>';
+						endwhile;
+					endif;
 				// Previous/next page navigation.
 					the_posts_pagination( array(
 						'prev_text'          => '<i class="fa fa-angle-double-left"></i>',
